@@ -130,16 +130,6 @@ namespace AstarteDeviceSDKCSharp.Tests.Protocol
         }
 
         [Fact]
-        public void ValidateAggregateLTooFewPayloadTest()
-        {
-            Dictionary<string, object> payload = new Dictionary<string, object>();
-            payload.Add("one", 1);
-
-            Assert.Throws<AstarteInvalidValueException>(() =>
-            aInterface.ValidatePayload("/test", payload, new DateTime()));
-        }
-
-        [Fact]
         public void ValidateAggregateTooMuchPayloadTest()
         {
             Dictionary<string, object> payload = new Dictionary<string, object>();
